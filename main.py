@@ -1,0 +1,1 @@
+## each folder contains a solution to a day of Advent of Code 2021 in python
