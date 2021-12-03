@@ -1,3 +1,5 @@
+## for these, you can also use recursion to solve
+
 def part1():
   ## opens txt file with depth values
   with open('inputDay1.txt', 'r') as f:
