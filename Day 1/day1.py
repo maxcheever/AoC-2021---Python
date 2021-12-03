@@ -18,16 +18,16 @@ def part1():
 ## essentially the same thing, just using 3 values instead of 1
 def part2():
   ## this time used a list instead of just data
-  f = open('inputDay1.txt', 'r')
-  d = []
-  for l in f:
-    d.append(int(l.rstrip('\n')))
-  inc = 0
-  for i, l in enumerate(d):
+  with open('inputDay1.txt', 'r') as f:
+    d = []
+    for l in f:
+      d.append(int(l.rstrip('\n')))
+    inc = 0
+    for i, l in enumerate(d):
     ## ends at last possible sum of 3 values
-    if d[-3] is l:
-      return inc
-    s = l + d[i+1] + d[i+2]
-    ns = d[i+1] + d[i+2] + d[i+3]
-    if ns > s:
-      inc += 1
+      if d[-3] is l:
+        return inc
+      s = l + d[i+1] + d[i+2]
+      ns = d[i+1] + d[i+2] + d[i+3]
+      if ns > s:
+        inc += 1
