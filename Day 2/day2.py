@@ -10,9 +10,9 @@ def part1():
       ## adds to depth or height according to direction value
       if newL[0] == 'forward':
         h += newL[1]
-      if newL[0] == 'down':
+      elif newL[0] == 'down':
         v += newL[1]
-      if newL[0] == 'up':
+      elif newL[0] == 'up':
         v -= newL[1]
   mult = h*v
   return mult
@@ -33,9 +33,9 @@ def part2():
         if a > 0:
           v += (newL[1]*a)
       ## now the 'up' and 'down' directions change the value of aim instead of depth
-      if newL[0] == 'down':
+      elif newL[0] == 'down':
         a += newL[1]
-      if newL[0] == 'up':
+      elif newL[0] == 'up':
         a -= newL[1]
   mult = h*v
   return mult
